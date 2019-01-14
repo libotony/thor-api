@@ -1905,7 +1905,7 @@ e.Index.prototype.use=function(e){var t=Array.prototype.slice.call(arguments,1);
 <p><a href="https://github.com/vechain/thor">Project Home</a></p>
 <p>Base URLs:</p>
 <ul>
-<li><a href="/">/</a></li>
+<li><a href="http">http&quot;//localhost:8669</a></li>
 </ul>
 <p>License: <a href="https://www.gnu.org/licenses/lgpl-3.0.en.html">LGPL 3.0</a></p>
 <h1 id="Thorest-Accounts">Accounts</h1>
@@ -1915,11 +1915,11 @@ e.Index.prototype.use=function(e){var t=Array.prototype.slice.call(arguments,1);
 <p>Code samples</p>
 </blockquote>
 <pre class="highlight tab tab-shell"><code><span class="hljs-comment"># You can also use wget</span>
-curl -X GET //accounts/{address} \
-  -H <span class="hljs-string">'Accept: application/json'</span>
+curl -X GET http<span class="hljs-string">"//localhost:8669/accounts/{address} \
+  -H 'Accept: application/json'
 
-</code></pre>
-<pre class="highlight tab tab-http"><code><span class="hljs-keyword">GET</span> <span class="hljs-string">//accounts/{address}</span> HTTP/1.1
+</span></code></pre>
+<pre class="highlight tab tab-http"><code><span class="hljs-keyword">GET</span> <span class="hljs-string">http"//localhost:8669/accounts/{address}</span> HTTP/1.1
 <span class="hljs-attribute">Host</span>: null
 
 <span class="http"><span class="hljs-attribute">Accept</span>: application/json
@@ -1931,7 +1931,7 @@ curl -X GET //accounts/{address} \
 };
 
 $.ajax({
-  <span class="hljs-attr">url</span>: <span class="hljs-string">'//accounts/{address}'</span>,
+  <span class="hljs-attr">url</span>: <span class="hljs-string">'http"//localhost:8669/accounts/{address}'</span>,
   <span class="hljs-attr">method</span>: <span class="hljs-string">'get'</span>,
 
   <span class="hljs-attr">headers</span>: headers,
@@ -1948,7 +1948,7 @@ $.ajax({
 
 };
 
-fetch(<span class="hljs-string">'//accounts/{address}'</span>,
+fetch(<span class="hljs-string">'http"//localhost:8669/accounts/{address}'</span>,
 {
   <span class="hljs-attr">method</span>: <span class="hljs-string">'GET'</span>,
 
@@ -1968,7 +1968,7 @@ headers = {
   <span class="hljs-string">'Accept'</span> =&gt; <span class="hljs-string">'application/json'</span>
 }
 
-result = RestClient.get <span class="hljs-string">'//accounts/{address}'</span>,
+result = RestClient.get <span class="hljs-string">'http"//localhost:8669/accounts/{address}'</span>,
   <span class="hljs-symbol">params:</span> {
   }, <span class="hljs-symbol">headers:</span> headers
 
@@ -1980,14 +1980,14 @@ headers = {
   <span class="hljs-string">'Accept'</span>: <span class="hljs-string">'application/json'</span>
 }
 
-r = requests.get(<span class="hljs-string">'//accounts/{address}'</span>, params={
+r = requests.get(<span class="hljs-string">'http"//localhost:8669/accounts/{address}'</span>, params={
 
 }, headers = headers)
 
 <span class="hljs-keyword">print</span> r.json()
 
 </code></pre>
-<pre class="highlight tab tab-java"><code>URL obj = <span class="hljs-keyword">new</span> URL(<span class="hljs-string">"//accounts/{address}"</span>);
+<pre class="highlight tab tab-java"><code>URL obj = <span class="hljs-keyword">new</span> URL(<span class="hljs-string">"http"</span><span class="hljs-comment">//localhost:8669/accounts/{address}");</span>
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod(<span class="hljs-string">"GET"</span>);
 <span class="hljs-keyword">int</span> responseCode = con.getResponseCode();
@@ -2017,7 +2017,7 @@ System.out.println(response.toString());
     }
 
     data := bytes.NewBuffer([]<span class="hljs-keyword">byte</span>{jsonReq})
-    req, err := http.NewRequest(<span class="hljs-string">"GET"</span>, <span class="hljs-string">"//accounts/{address}"</span>, data)
+    req, err := http.NewRequest(<span class="hljs-string">"GET"</span>, <span class="hljs-string">"http"</span><span class="hljs-comment">//localhost:8669/accounts/{address}", data)</span>
     req.Header = headers
 
     client := &amp;http.Client{}
@@ -2096,12 +2096,12 @@ This operation does not require authentication
 <p>Code samples</p>
 </blockquote>
 <pre class="highlight tab tab-shell"><code><span class="hljs-comment"># You can also use wget</span>
-curl -X POST //accounts/{address} \
-  -H <span class="hljs-string">'Content-Type: application/json'</span> \
-  -H <span class="hljs-string">'Accept: application/json'</span>
+curl -X POST http<span class="hljs-string">"//localhost:8669/accounts/{address} \
+  -H 'Content-Type: application/json' \
+  -H 'Accept: application/json'
 
-</code></pre>
-<pre class="highlight tab tab-http"><code><span class="hljs-keyword">POST</span> <span class="hljs-string">//accounts/{address}</span> HTTP/1.1
+</span></code></pre>
+<pre class="highlight tab tab-http"><code><span class="hljs-keyword">POST</span> <span class="hljs-string">http"//localhost:8669/accounts/{address}</span> HTTP/1.1
 <span class="hljs-attribute">Host</span>: null
 <span class="hljs-attribute">Content-Type</span>: application/json
 <span class="hljs-attribute">Accept</span>: application/json
@@ -2114,7 +2114,7 @@ curl -X POST //accounts/{address} \
 };
 
 $.ajax({
-  <span class="hljs-attr">url</span>: <span class="hljs-string">'//accounts/{address}'</span>,
+  <span class="hljs-attr">url</span>: <span class="hljs-string">'http"//localhost:8669/accounts/{address}'</span>,
   <span class="hljs-attr">method</span>: <span class="hljs-string">'post'</span>,
 
   <span class="hljs-attr">headers</span>: headers,
@@ -2135,7 +2135,7 @@ $.ajax({
 
 };
 
-fetch(<span class="hljs-string">'//accounts/{address}'</span>,
+fetch(<span class="hljs-string">'http"//localhost:8669/accounts/{address}'</span>,
 {
   <span class="hljs-attr">method</span>: <span class="hljs-string">'POST'</span>,
   <span class="hljs-attr">body</span>: inputBody,
@@ -2156,7 +2156,7 @@ headers = {
   <span class="hljs-string">'Accept'</span> =&gt; <span class="hljs-string">'application/json'</span>
 }
 
-result = RestClient.post <span class="hljs-string">'//accounts/{address}'</span>,
+result = RestClient.post <span class="hljs-string">'http"//localhost:8669/accounts/{address}'</span>,
   <span class="hljs-symbol">params:</span> {
   }, <span class="hljs-symbol">headers:</span> headers
 
@@ -2169,14 +2169,14 @@ headers = {
   <span class="hljs-string">'Accept'</span>: <span class="hljs-string">'application/json'</span>
 }
 
-r = requests.post(<span class="hljs-string">'//accounts/{address}'</span>, params={
+r = requests.post(<span class="hljs-string">'http"//localhost:8669/accounts/{address}'</span>, params={
 
 }, headers = headers)
 
 <span class="hljs-keyword">print</span> r.json()
 
 </code></pre>
-<pre class="highlight tab tab-java"><code>URL obj = <span class="hljs-keyword">new</span> URL(<span class="hljs-string">"//accounts/{address}"</span>);
+<pre class="highlight tab tab-java"><code>URL obj = <span class="hljs-keyword">new</span> URL(<span class="hljs-string">"http"</span><span class="hljs-comment">//localhost:8669/accounts/{address}");</span>
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod(<span class="hljs-string">"POST"</span>);
 <span class="hljs-keyword">int</span> responseCode = con.getResponseCode();
@@ -2207,7 +2207,7 @@ System.out.println(response.toString());
     }
 
     data := bytes.NewBuffer([]<span class="hljs-keyword">byte</span>{jsonReq})
-    req, err := http.NewRequest(<span class="hljs-string">"POST"</span>, <span class="hljs-string">"//accounts/{address}"</span>, data)
+    req, err := http.NewRequest(<span class="hljs-string">"POST"</span>, <span class="hljs-string">"http"</span><span class="hljs-comment">//localhost:8669/accounts/{address}", data)</span>
     req.Header = headers
 
     client := &amp;http.Client{}
@@ -2318,12 +2318,12 @@ This operation does not require authentication
 <p>Code samples</p>
 </blockquote>
 <pre class="highlight tab tab-shell"><code><span class="hljs-comment"># You can also use wget</span>
-curl -X POST //accounts/* \
-  -H <span class="hljs-string">'Content-Type: application/json'</span> \
-  -H <span class="hljs-string">'Accept: application/json'</span>
+curl -X POST http<span class="hljs-string">"//localhost:8669/accounts/* \
+  -H 'Content-Type: application/json' \
+  -H 'Accept: application/json'
 
-</code></pre>
-<pre class="highlight tab tab-http"><code><span class="hljs-keyword">POST</span> <span class="hljs-string">//accounts/*</span> HTTP/1.1
+</span></code></pre>
+<pre class="highlight tab tab-http"><code><span class="hljs-keyword">POST</span> <span class="hljs-string">http"//localhost:8669/accounts/*</span> HTTP/1.1
 <span class="hljs-attribute">Host</span>: null
 <span class="hljs-attribute">Content-Type</span>: application/json
 <span class="hljs-attribute">Accept</span>: application/json
@@ -2336,7 +2336,7 @@ curl -X POST //accounts/* \
 };
 
 $.ajax({
-  <span class="hljs-attr">url</span>: <span class="hljs-string">'//accounts/*'</span>,
+  <span class="hljs-attr">url</span>: <span class="hljs-string">'http"//localhost:8669/accounts/*'</span>,
   <span class="hljs-attr">method</span>: <span class="hljs-string">'post'</span>,
 
   <span class="hljs-attr">headers</span>: headers,
@@ -2362,7 +2362,7 @@ $.ajax({
 
 };
 
-fetch(<span class="hljs-string">'//accounts/*'</span>,
+fetch(<span class="hljs-string">'http"//localhost:8669/accounts/*'</span>,
 {
   <span class="hljs-attr">method</span>: <span class="hljs-string">'POST'</span>,
   <span class="hljs-attr">body</span>: inputBody,
@@ -2383,7 +2383,7 @@ headers = {
   <span class="hljs-string">'Accept'</span> =&gt; <span class="hljs-string">'application/json'</span>
 }
 
-result = RestClient.post <span class="hljs-string">'//accounts/*'</span>,
+result = RestClient.post <span class="hljs-string">'http"//localhost:8669/accounts/*'</span>,
   <span class="hljs-symbol">params:</span> {
   }, <span class="hljs-symbol">headers:</span> headers
 
@@ -2396,14 +2396,14 @@ headers = {
   <span class="hljs-string">'Accept'</span>: <span class="hljs-string">'application/json'</span>
 }
 
-r = requests.post(<span class="hljs-string">'//accounts/*'</span>, params={
+r = requests.post(<span class="hljs-string">'http"//localhost:8669/accounts/*'</span>, params={
 
 }, headers = headers)
 
 <span class="hljs-keyword">print</span> r.json()
 
 </code></pre>
-<pre class="highlight tab tab-java"><code>URL obj = <span class="hljs-keyword">new</span> URL(<span class="hljs-string">"//accounts/*"</span>);
+<pre class="highlight tab tab-java"><code>URL obj = <span class="hljs-keyword">new</span> URL(<span class="hljs-string">"http"</span><span class="hljs-comment">//localhost:8669/accounts/*");</span>
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod(<span class="hljs-string">"POST"</span>);
 <span class="hljs-keyword">int</span> responseCode = con.getResponseCode();
@@ -2434,7 +2434,7 @@ System.out.println(response.toString());
     }
 
     data := bytes.NewBuffer([]<span class="hljs-keyword">byte</span>{jsonReq})
-    req, err := http.NewRequest(<span class="hljs-string">"POST"</span>, <span class="hljs-string">"//accounts/*"</span>, data)
+    req, err := http.NewRequest(<span class="hljs-string">"POST"</span>, <span class="hljs-string">"http"</span><span class="hljs-comment">//localhost:8669/accounts/*", data)</span>
     req.Header = headers
 
     client := &amp;http.Client{}
@@ -2544,12 +2544,12 @@ This operation does not require authentication
 <p>Code samples</p>
 </blockquote>
 <pre class="highlight tab tab-shell"><code><span class="hljs-comment"># You can also use wget</span>
-curl -X POST //accounts \
-  -H <span class="hljs-string">'Content-Type: application/json'</span> \
-  -H <span class="hljs-string">'Accept: application/json'</span>
+curl -X POST http<span class="hljs-string">"//localhost:8669/accounts \
+  -H 'Content-Type: application/json' \
+  -H 'Accept: application/json'
 
-</code></pre>
-<pre class="highlight tab tab-http"><code><span class="hljs-keyword">POST</span> <span class="hljs-string">//accounts</span> HTTP/1.1
+</span></code></pre>
+<pre class="highlight tab tab-http"><code><span class="hljs-keyword">POST</span> <span class="hljs-string">http"//localhost:8669/accounts</span> HTTP/1.1
 <span class="hljs-attribute">Host</span>: null
 <span class="hljs-attribute">Content-Type</span>: application/json
 <span class="hljs-attribute">Accept</span>: application/json
@@ -2562,7 +2562,7 @@ curl -X POST //accounts \
 };
 
 $.ajax({
-  <span class="hljs-attr">url</span>: <span class="hljs-string">'//accounts'</span>,
+  <span class="hljs-attr">url</span>: <span class="hljs-string">'http"//localhost:8669/accounts'</span>,
   <span class="hljs-attr">method</span>: <span class="hljs-string">'post'</span>,
 
   <span class="hljs-attr">headers</span>: headers,
@@ -2583,7 +2583,7 @@ $.ajax({
 
 };
 
-fetch(<span class="hljs-string">'//accounts'</span>,
+fetch(<span class="hljs-string">'http"//localhost:8669/accounts'</span>,
 {
   <span class="hljs-attr">method</span>: <span class="hljs-string">'POST'</span>,
   <span class="hljs-attr">body</span>: inputBody,
@@ -2604,7 +2604,7 @@ headers = {
   <span class="hljs-string">'Accept'</span> =&gt; <span class="hljs-string">'application/json'</span>
 }
 
-result = RestClient.post <span class="hljs-string">'//accounts'</span>,
+result = RestClient.post <span class="hljs-string">'http"//localhost:8669/accounts'</span>,
   <span class="hljs-symbol">params:</span> {
   }, <span class="hljs-symbol">headers:</span> headers
 
@@ -2617,14 +2617,14 @@ headers = {
   <span class="hljs-string">'Accept'</span>: <span class="hljs-string">'application/json'</span>
 }
 
-r = requests.post(<span class="hljs-string">'//accounts'</span>, params={
+r = requests.post(<span class="hljs-string">'http"//localhost:8669/accounts'</span>, params={
 
 }, headers = headers)
 
 <span class="hljs-keyword">print</span> r.json()
 
 </code></pre>
-<pre class="highlight tab tab-java"><code>URL obj = <span class="hljs-keyword">new</span> URL(<span class="hljs-string">"//accounts"</span>);
+<pre class="highlight tab tab-java"><code>URL obj = <span class="hljs-keyword">new</span> URL(<span class="hljs-string">"http"</span><span class="hljs-comment">//localhost:8669/accounts");</span>
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod(<span class="hljs-string">"POST"</span>);
 <span class="hljs-keyword">int</span> responseCode = con.getResponseCode();
@@ -2655,7 +2655,7 @@ System.out.println(response.toString());
     }
 
     data := bytes.NewBuffer([]<span class="hljs-keyword">byte</span>{jsonReq})
-    req, err := http.NewRequest(<span class="hljs-string">"POST"</span>, <span class="hljs-string">"//accounts"</span>, data)
+    req, err := http.NewRequest(<span class="hljs-string">"POST"</span>, <span class="hljs-string">"http"</span><span class="hljs-comment">//localhost:8669/accounts", data)</span>
     req.Header = headers
 
     client := &amp;http.Client{}
@@ -2764,11 +2764,11 @@ This operation does not require authentication
 <p>Code samples</p>
 </blockquote>
 <pre class="highlight tab tab-shell"><code><span class="hljs-comment"># You can also use wget</span>
-curl -X GET //accounts/{address}/code \
-  -H <span class="hljs-string">'Accept: application/json'</span>
+curl -X GET http<span class="hljs-string">"//localhost:8669/accounts/{address}/code \
+  -H 'Accept: application/json'
 
-</code></pre>
-<pre class="highlight tab tab-http"><code><span class="hljs-keyword">GET</span> <span class="hljs-string">//accounts/{address}/code</span> HTTP/1.1
+</span></code></pre>
+<pre class="highlight tab tab-http"><code><span class="hljs-keyword">GET</span> <span class="hljs-string">http"//localhost:8669/accounts/{address}/code</span> HTTP/1.1
 <span class="hljs-attribute">Host</span>: null
 
 <span class="http"><span class="hljs-attribute">Accept</span>: application/json
@@ -2780,7 +2780,7 @@ curl -X GET //accounts/{address}/code \
 };
 
 $.ajax({
-  <span class="hljs-attr">url</span>: <span class="hljs-string">'//accounts/{address}/code'</span>,
+  <span class="hljs-attr">url</span>: <span class="hljs-string">'http"//localhost:8669/accounts/{address}/code'</span>,
   <span class="hljs-attr">method</span>: <span class="hljs-string">'get'</span>,
 
   <span class="hljs-attr">headers</span>: headers,
@@ -2797,7 +2797,7 @@ $.ajax({
 
 };
 
-fetch(<span class="hljs-string">'//accounts/{address}/code'</span>,
+fetch(<span class="hljs-string">'http"//localhost:8669/accounts/{address}/code'</span>,
 {
   <span class="hljs-attr">method</span>: <span class="hljs-string">'GET'</span>,
 
@@ -2817,7 +2817,7 @@ headers = {
   <span class="hljs-string">'Accept'</span> =&gt; <span class="hljs-string">'application/json'</span>
 }
 
-result = RestClient.get <span class="hljs-string">'//accounts/{address}/code'</span>,
+result = RestClient.get <span class="hljs-string">'http"//localhost:8669/accounts/{address}/code'</span>,
   <span class="hljs-symbol">params:</span> {
   }, <span class="hljs-symbol">headers:</span> headers
 
@@ -2829,14 +2829,14 @@ headers = {
   <span class="hljs-string">'Accept'</span>: <span class="hljs-string">'application/json'</span>
 }
 
-r = requests.get(<span class="hljs-string">'//accounts/{address}/code'</span>, params={
+r = requests.get(<span class="hljs-string">'http"//localhost:8669/accounts/{address}/code'</span>, params={
 
 }, headers = headers)
 
 <span class="hljs-keyword">print</span> r.json()
 
 </code></pre>
-<pre class="highlight tab tab-java"><code>URL obj = <span class="hljs-keyword">new</span> URL(<span class="hljs-string">"//accounts/{address}/code"</span>);
+<pre class="highlight tab tab-java"><code>URL obj = <span class="hljs-keyword">new</span> URL(<span class="hljs-string">"http"</span><span class="hljs-comment">//localhost:8669/accounts/{address}/code");</span>
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod(<span class="hljs-string">"GET"</span>);
 <span class="hljs-keyword">int</span> responseCode = con.getResponseCode();
@@ -2866,7 +2866,7 @@ System.out.println(response.toString());
     }
 
     data := bytes.NewBuffer([]<span class="hljs-keyword">byte</span>{jsonReq})
-    req, err := http.NewRequest(<span class="hljs-string">"GET"</span>, <span class="hljs-string">"//accounts/{address}/code"</span>, data)
+    req, err := http.NewRequest(<span class="hljs-string">"GET"</span>, <span class="hljs-string">"http"</span><span class="hljs-comment">//localhost:8669/accounts/{address}/code", data)</span>
     req.Header = headers
 
     client := &amp;http.Client{}
@@ -2942,11 +2942,11 @@ This operation does not require authentication
 <p>Code samples</p>
 </blockquote>
 <pre class="highlight tab tab-shell"><code><span class="hljs-comment"># You can also use wget</span>
-curl -X GET //accounts/{address}/storage/{key} \
-  -H <span class="hljs-string">'Accept: application/json'</span>
+curl -X GET http<span class="hljs-string">"//localhost:8669/accounts/{address}/storage/{key} \
+  -H 'Accept: application/json'
 
-</code></pre>
-<pre class="highlight tab tab-http"><code><span class="hljs-keyword">GET</span> <span class="hljs-string">//accounts/{address}/storage/{key}</span> HTTP/1.1
+</span></code></pre>
+<pre class="highlight tab tab-http"><code><span class="hljs-keyword">GET</span> <span class="hljs-string">http"//localhost:8669/accounts/{address}/storage/{key}</span> HTTP/1.1
 <span class="hljs-attribute">Host</span>: null
 
 <span class="http"><span class="hljs-attribute">Accept</span>: application/json
@@ -2958,7 +2958,7 @@ curl -X GET //accounts/{address}/storage/{key} \
 };
 
 $.ajax({
-  <span class="hljs-attr">url</span>: <span class="hljs-string">'//accounts/{address}/storage/{key}'</span>,
+  <span class="hljs-attr">url</span>: <span class="hljs-string">'http"//localhost:8669/accounts/{address}/storage/{key}'</span>,
   <span class="hljs-attr">method</span>: <span class="hljs-string">'get'</span>,
 
   <span class="hljs-attr">headers</span>: headers,
@@ -2975,7 +2975,7 @@ $.ajax({
 
 };
 
-fetch(<span class="hljs-string">'//accounts/{address}/storage/{key}'</span>,
+fetch(<span class="hljs-string">'http"//localhost:8669/accounts/{address}/storage/{key}'</span>,
 {
   <span class="hljs-attr">method</span>: <span class="hljs-string">'GET'</span>,
 
@@ -2995,7 +2995,7 @@ headers = {
   <span class="hljs-string">'Accept'</span> =&gt; <span class="hljs-string">'application/json'</span>
 }
 
-result = RestClient.get <span class="hljs-string">'//accounts/{address}/storage/{key}'</span>,
+result = RestClient.get <span class="hljs-string">'http"//localhost:8669/accounts/{address}/storage/{key}'</span>,
   <span class="hljs-symbol">params:</span> {
   }, <span class="hljs-symbol">headers:</span> headers
 
@@ -3007,14 +3007,14 @@ headers = {
   <span class="hljs-string">'Accept'</span>: <span class="hljs-string">'application/json'</span>
 }
 
-r = requests.get(<span class="hljs-string">'//accounts/{address}/storage/{key}'</span>, params={
+r = requests.get(<span class="hljs-string">'http"//localhost:8669/accounts/{address}/storage/{key}'</span>, params={
 
 }, headers = headers)
 
 <span class="hljs-keyword">print</span> r.json()
 
 </code></pre>
-<pre class="highlight tab tab-java"><code>URL obj = <span class="hljs-keyword">new</span> URL(<span class="hljs-string">"//accounts/{address}/storage/{key}"</span>);
+<pre class="highlight tab tab-java"><code>URL obj = <span class="hljs-keyword">new</span> URL(<span class="hljs-string">"http"</span><span class="hljs-comment">//localhost:8669/accounts/{address}/storage/{key}");</span>
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod(<span class="hljs-string">"GET"</span>);
 <span class="hljs-keyword">int</span> responseCode = con.getResponseCode();
@@ -3044,7 +3044,7 @@ System.out.println(response.toString());
     }
 
     data := bytes.NewBuffer([]<span class="hljs-keyword">byte</span>{jsonReq})
-    req, err := http.NewRequest(<span class="hljs-string">"GET"</span>, <span class="hljs-string">"//accounts/{address}/storage/{key}"</span>, data)
+    req, err := http.NewRequest(<span class="hljs-string">"GET"</span>, <span class="hljs-string">"http"</span><span class="hljs-comment">//localhost:8669/accounts/{address}/storage/{key}", data)</span>
     req.Header = headers
 
     client := &amp;http.Client{}
@@ -3129,11 +3129,11 @@ This operation does not require authentication
 <p>Code samples</p>
 </blockquote>
 <pre class="highlight tab tab-shell"><code><span class="hljs-comment"># You can also use wget</span>
-curl -X GET //transactions/{id} \
-  -H <span class="hljs-string">'Accept: application/json'</span>
+curl -X GET http<span class="hljs-string">"//localhost:8669/transactions/{id} \
+  -H 'Accept: application/json'
 
-</code></pre>
-<pre class="highlight tab tab-http"><code><span class="hljs-keyword">GET</span> <span class="hljs-string">//transactions/{id}</span> HTTP/1.1
+</span></code></pre>
+<pre class="highlight tab tab-http"><code><span class="hljs-keyword">GET</span> <span class="hljs-string">http"//localhost:8669/transactions/{id}</span> HTTP/1.1
 <span class="hljs-attribute">Host</span>: null
 
 <span class="http"><span class="hljs-attribute">Accept</span>: application/json
@@ -3145,7 +3145,7 @@ curl -X GET //transactions/{id} \
 };
 
 $.ajax({
-  <span class="hljs-attr">url</span>: <span class="hljs-string">'//transactions/{id}'</span>,
+  <span class="hljs-attr">url</span>: <span class="hljs-string">'http"//localhost:8669/transactions/{id}'</span>,
   <span class="hljs-attr">method</span>: <span class="hljs-string">'get'</span>,
 
   <span class="hljs-attr">headers</span>: headers,
@@ -3162,7 +3162,7 @@ $.ajax({
 
 };
 
-fetch(<span class="hljs-string">'//transactions/{id}'</span>,
+fetch(<span class="hljs-string">'http"//localhost:8669/transactions/{id}'</span>,
 {
   <span class="hljs-attr">method</span>: <span class="hljs-string">'GET'</span>,
 
@@ -3182,7 +3182,7 @@ headers = {
   <span class="hljs-string">'Accept'</span> =&gt; <span class="hljs-string">'application/json'</span>
 }
 
-result = RestClient.get <span class="hljs-string">'//transactions/{id}'</span>,
+result = RestClient.get <span class="hljs-string">'http"//localhost:8669/transactions/{id}'</span>,
   <span class="hljs-symbol">params:</span> {
   }, <span class="hljs-symbol">headers:</span> headers
 
@@ -3194,14 +3194,14 @@ headers = {
   <span class="hljs-string">'Accept'</span>: <span class="hljs-string">'application/json'</span>
 }
 
-r = requests.get(<span class="hljs-string">'//transactions/{id}'</span>, params={
+r = requests.get(<span class="hljs-string">'http"//localhost:8669/transactions/{id}'</span>, params={
 
 }, headers = headers)
 
 <span class="hljs-keyword">print</span> r.json()
 
 </code></pre>
-<pre class="highlight tab tab-java"><code>URL obj = <span class="hljs-keyword">new</span> URL(<span class="hljs-string">"//transactions/{id}"</span>);
+<pre class="highlight tab tab-java"><code>URL obj = <span class="hljs-keyword">new</span> URL(<span class="hljs-string">"http"</span><span class="hljs-comment">//localhost:8669/transactions/{id}");</span>
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod(<span class="hljs-string">"GET"</span>);
 <span class="hljs-keyword">int</span> responseCode = con.getResponseCode();
@@ -3231,7 +3231,7 @@ System.out.println(response.toString());
     }
 
     data := bytes.NewBuffer([]<span class="hljs-keyword">byte</span>{jsonReq})
-    req, err := http.NewRequest(<span class="hljs-string">"GET"</span>, <span class="hljs-string">"//transactions/{id}"</span>, data)
+    req, err := http.NewRequest(<span class="hljs-string">"GET"</span>, <span class="hljs-string">"http"</span><span class="hljs-comment">//localhost:8669/transactions/{id}", data)</span>
     req.Header = headers
 
     client := &amp;http.Client{}
@@ -3329,11 +3329,11 @@ This operation does not require authentication
 <p>Code samples</p>
 </blockquote>
 <pre class="highlight tab tab-shell"><code><span class="hljs-comment"># You can also use wget</span>
-curl -X GET //transactions/{id}/receipt \
-  -H <span class="hljs-string">'Accept: application/json'</span>
+curl -X GET http<span class="hljs-string">"//localhost:8669/transactions/{id}/receipt \
+  -H 'Accept: application/json'
 
-</code></pre>
-<pre class="highlight tab tab-http"><code><span class="hljs-keyword">GET</span> <span class="hljs-string">//transactions/{id}/receipt</span> HTTP/1.1
+</span></code></pre>
+<pre class="highlight tab tab-http"><code><span class="hljs-keyword">GET</span> <span class="hljs-string">http"//localhost:8669/transactions/{id}/receipt</span> HTTP/1.1
 <span class="hljs-attribute">Host</span>: null
 
 <span class="http"><span class="hljs-attribute">Accept</span>: application/json
@@ -3345,7 +3345,7 @@ curl -X GET //transactions/{id}/receipt \
 };
 
 $.ajax({
-  <span class="hljs-attr">url</span>: <span class="hljs-string">'//transactions/{id}/receipt'</span>,
+  <span class="hljs-attr">url</span>: <span class="hljs-string">'http"//localhost:8669/transactions/{id}/receipt'</span>,
   <span class="hljs-attr">method</span>: <span class="hljs-string">'get'</span>,
 
   <span class="hljs-attr">headers</span>: headers,
@@ -3362,7 +3362,7 @@ $.ajax({
 
 };
 
-fetch(<span class="hljs-string">'//transactions/{id}/receipt'</span>,
+fetch(<span class="hljs-string">'http"//localhost:8669/transactions/{id}/receipt'</span>,
 {
   <span class="hljs-attr">method</span>: <span class="hljs-string">'GET'</span>,
 
@@ -3382,7 +3382,7 @@ headers = {
   <span class="hljs-string">'Accept'</span> =&gt; <span class="hljs-string">'application/json'</span>
 }
 
-result = RestClient.get <span class="hljs-string">'//transactions/{id}/receipt'</span>,
+result = RestClient.get <span class="hljs-string">'http"//localhost:8669/transactions/{id}/receipt'</span>,
   <span class="hljs-symbol">params:</span> {
   }, <span class="hljs-symbol">headers:</span> headers
 
@@ -3394,14 +3394,14 @@ headers = {
   <span class="hljs-string">'Accept'</span>: <span class="hljs-string">'application/json'</span>
 }
 
-r = requests.get(<span class="hljs-string">'//transactions/{id}/receipt'</span>, params={
+r = requests.get(<span class="hljs-string">'http"//localhost:8669/transactions/{id}/receipt'</span>, params={
 
 }, headers = headers)
 
 <span class="hljs-keyword">print</span> r.json()
 
 </code></pre>
-<pre class="highlight tab tab-java"><code>URL obj = <span class="hljs-keyword">new</span> URL(<span class="hljs-string">"//transactions/{id}/receipt"</span>);
+<pre class="highlight tab tab-java"><code>URL obj = <span class="hljs-keyword">new</span> URL(<span class="hljs-string">"http"</span><span class="hljs-comment">//localhost:8669/transactions/{id}/receipt");</span>
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod(<span class="hljs-string">"GET"</span>);
 <span class="hljs-keyword">int</span> responseCode = con.getResponseCode();
@@ -3431,7 +3431,7 @@ System.out.println(response.toString());
     }
 
     data := bytes.NewBuffer([]<span class="hljs-keyword">byte</span>{jsonReq})
-    req, err := http.NewRequest(<span class="hljs-string">"GET"</span>, <span class="hljs-string">"//transactions/{id}/receipt"</span>, data)
+    req, err := http.NewRequest(<span class="hljs-string">"GET"</span>, <span class="hljs-string">"http"</span><span class="hljs-comment">//localhost:8669/transactions/{id}/receipt", data)</span>
     req.Header = headers
 
     client := &amp;http.Client{}
@@ -3539,12 +3539,12 @@ This operation does not require authentication
 <p>Code samples</p>
 </blockquote>
 <pre class="highlight tab tab-shell"><code><span class="hljs-comment"># You can also use wget</span>
-curl -X POST //transactions \
-  -H <span class="hljs-string">'Content-Type: application/json'</span> \
-  -H <span class="hljs-string">'Accept: application/json'</span>
+curl -X POST http<span class="hljs-string">"//localhost:8669/transactions \
+  -H 'Content-Type: application/json' \
+  -H 'Accept: application/json'
 
-</code></pre>
-<pre class="highlight tab tab-http"><code><span class="hljs-keyword">POST</span> <span class="hljs-string">//transactions</span> HTTP/1.1
+</span></code></pre>
+<pre class="highlight tab tab-http"><code><span class="hljs-keyword">POST</span> <span class="hljs-string">http"//localhost:8669/transactions</span> HTTP/1.1
 <span class="hljs-attribute">Host</span>: null
 <span class="hljs-attribute">Content-Type</span>: application/json
 <span class="hljs-attribute">Accept</span>: application/json
@@ -3557,7 +3557,7 @@ curl -X POST //transactions \
 };
 
 $.ajax({
-  <span class="hljs-attr">url</span>: <span class="hljs-string">'//transactions'</span>,
+  <span class="hljs-attr">url</span>: <span class="hljs-string">'http"//localhost:8669/transactions'</span>,
   <span class="hljs-attr">method</span>: <span class="hljs-string">'post'</span>,
 
   <span class="hljs-attr">headers</span>: headers,
@@ -3577,7 +3577,7 @@ $.ajax({
 
 };
 
-fetch(<span class="hljs-string">'//transactions'</span>,
+fetch(<span class="hljs-string">'http"//localhost:8669/transactions'</span>,
 {
   <span class="hljs-attr">method</span>: <span class="hljs-string">'POST'</span>,
   <span class="hljs-attr">body</span>: inputBody,
@@ -3598,7 +3598,7 @@ headers = {
   <span class="hljs-string">'Accept'</span> =&gt; <span class="hljs-string">'application/json'</span>
 }
 
-result = RestClient.post <span class="hljs-string">'//transactions'</span>,
+result = RestClient.post <span class="hljs-string">'http"//localhost:8669/transactions'</span>,
   <span class="hljs-symbol">params:</span> {
   }, <span class="hljs-symbol">headers:</span> headers
 
@@ -3611,14 +3611,14 @@ headers = {
   <span class="hljs-string">'Accept'</span>: <span class="hljs-string">'application/json'</span>
 }
 
-r = requests.post(<span class="hljs-string">'//transactions'</span>, params={
+r = requests.post(<span class="hljs-string">'http"//localhost:8669/transactions'</span>, params={
 
 }, headers = headers)
 
 <span class="hljs-keyword">print</span> r.json()
 
 </code></pre>
-<pre class="highlight tab tab-java"><code>URL obj = <span class="hljs-keyword">new</span> URL(<span class="hljs-string">"//transactions"</span>);
+<pre class="highlight tab tab-java"><code>URL obj = <span class="hljs-keyword">new</span> URL(<span class="hljs-string">"http"</span><span class="hljs-comment">//localhost:8669/transactions");</span>
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod(<span class="hljs-string">"POST"</span>);
 <span class="hljs-keyword">int</span> responseCode = con.getResponseCode();
@@ -3649,7 +3649,7 @@ System.out.println(response.toString());
     }
 
     data := bytes.NewBuffer([]<span class="hljs-keyword">byte</span>{jsonReq})
-    req, err := http.NewRequest(<span class="hljs-string">"POST"</span>, <span class="hljs-string">"//transactions"</span>, data)
+    req, err := http.NewRequest(<span class="hljs-string">"POST"</span>, <span class="hljs-string">"http"</span><span class="hljs-comment">//localhost:8669/transactions", data)</span>
     req.Header = headers
 
     client := &amp;http.Client{}
@@ -3728,11 +3728,11 @@ This operation does not require authentication
 <p>Code samples</p>
 </blockquote>
 <pre class="highlight tab tab-shell"><code><span class="hljs-comment"># You can also use wget</span>
-curl -X GET //blocks/{revision} \
-  -H <span class="hljs-string">'Accept: application/json'</span>
+curl -X GET http<span class="hljs-string">"//localhost:8669/blocks/{revision} \
+  -H 'Accept: application/json'
 
-</code></pre>
-<pre class="highlight tab tab-http"><code><span class="hljs-keyword">GET</span> <span class="hljs-string">//blocks/{revision}</span> HTTP/1.1
+</span></code></pre>
+<pre class="highlight tab tab-http"><code><span class="hljs-keyword">GET</span> <span class="hljs-string">http"//localhost:8669/blocks/{revision}</span> HTTP/1.1
 <span class="hljs-attribute">Host</span>: null
 
 <span class="http"><span class="hljs-attribute">Accept</span>: application/json
@@ -3744,7 +3744,7 @@ curl -X GET //blocks/{revision} \
 };
 
 $.ajax({
-  <span class="hljs-attr">url</span>: <span class="hljs-string">'//blocks/{revision}'</span>,
+  <span class="hljs-attr">url</span>: <span class="hljs-string">'http"//localhost:8669/blocks/{revision}'</span>,
   <span class="hljs-attr">method</span>: <span class="hljs-string">'get'</span>,
 
   <span class="hljs-attr">headers</span>: headers,
@@ -3761,7 +3761,7 @@ $.ajax({
 
 };
 
-fetch(<span class="hljs-string">'//blocks/{revision}'</span>,
+fetch(<span class="hljs-string">'http"//localhost:8669/blocks/{revision}'</span>,
 {
   <span class="hljs-attr">method</span>: <span class="hljs-string">'GET'</span>,
 
@@ -3781,7 +3781,7 @@ headers = {
   <span class="hljs-string">'Accept'</span> =&gt; <span class="hljs-string">'application/json'</span>
 }
 
-result = RestClient.get <span class="hljs-string">'//blocks/{revision}'</span>,
+result = RestClient.get <span class="hljs-string">'http"//localhost:8669/blocks/{revision}'</span>,
   <span class="hljs-symbol">params:</span> {
   }, <span class="hljs-symbol">headers:</span> headers
 
@@ -3793,14 +3793,14 @@ headers = {
   <span class="hljs-string">'Accept'</span>: <span class="hljs-string">'application/json'</span>
 }
 
-r = requests.get(<span class="hljs-string">'//blocks/{revision}'</span>, params={
+r = requests.get(<span class="hljs-string">'http"//localhost:8669/blocks/{revision}'</span>, params={
 
 }, headers = headers)
 
 <span class="hljs-keyword">print</span> r.json()
 
 </code></pre>
-<pre class="highlight tab tab-java"><code>URL obj = <span class="hljs-keyword">new</span> URL(<span class="hljs-string">"//blocks/{revision}"</span>);
+<pre class="highlight tab tab-java"><code>URL obj = <span class="hljs-keyword">new</span> URL(<span class="hljs-string">"http"</span><span class="hljs-comment">//localhost:8669/blocks/{revision}");</span>
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod(<span class="hljs-string">"GET"</span>);
 <span class="hljs-keyword">int</span> responseCode = con.getResponseCode();
@@ -3830,7 +3830,7 @@ System.out.println(response.toString());
     }
 
     data := bytes.NewBuffer([]<span class="hljs-keyword">byte</span>{jsonReq})
-    req, err := http.NewRequest(<span class="hljs-string">"GET"</span>, <span class="hljs-string">"//blocks/{revision}"</span>, data)
+    req, err := http.NewRequest(<span class="hljs-string">"GET"</span>, <span class="hljs-string">"http"</span><span class="hljs-comment">//localhost:8669/blocks/{revision}", data)</span>
     req.Header = headers
 
     client := &amp;http.Client{}
@@ -3920,12 +3920,12 @@ This operation does not require authentication
 <p>Code samples</p>
 </blockquote>
 <pre class="highlight tab tab-shell"><code><span class="hljs-comment"># You can also use wget</span>
-curl -X POST //events \
-  -H <span class="hljs-string">'Content-Type: application/json'</span> \
-  -H <span class="hljs-string">'Accept: application/json'</span>
+curl -X POST http<span class="hljs-string">"//localhost:8669/events \
+  -H 'Content-Type: application/json' \
+  -H 'Accept: application/json'
 
-</code></pre>
-<pre class="highlight tab tab-http"><code><span class="hljs-keyword">POST</span> <span class="hljs-string">//events</span> HTTP/1.1
+</span></code></pre>
+<pre class="highlight tab tab-http"><code><span class="hljs-keyword">POST</span> <span class="hljs-string">http"//localhost:8669/events</span> HTTP/1.1
 <span class="hljs-attribute">Host</span>: null
 <span class="hljs-attribute">Content-Type</span>: application/json
 <span class="hljs-attribute">Accept</span>: application/json
@@ -3938,7 +3938,7 @@ curl -X POST //events \
 };
 
 $.ajax({
-  <span class="hljs-attr">url</span>: <span class="hljs-string">'//events'</span>,
+  <span class="hljs-attr">url</span>: <span class="hljs-string">'http"//localhost:8669/events'</span>,
   <span class="hljs-attr">method</span>: <span class="hljs-string">'post'</span>,
 
   <span class="hljs-attr">headers</span>: headers,
@@ -3971,7 +3971,7 @@ $.ajax({
 
 };
 
-fetch(<span class="hljs-string">'//events'</span>,
+fetch(<span class="hljs-string">'http"//localhost:8669/events'</span>,
 {
   <span class="hljs-attr">method</span>: <span class="hljs-string">'POST'</span>,
   <span class="hljs-attr">body</span>: inputBody,
@@ -3992,7 +3992,7 @@ headers = {
   <span class="hljs-string">'Accept'</span> =&gt; <span class="hljs-string">'application/json'</span>
 }
 
-result = RestClient.post <span class="hljs-string">'//events'</span>,
+result = RestClient.post <span class="hljs-string">'http"//localhost:8669/events'</span>,
   <span class="hljs-symbol">params:</span> {
   }, <span class="hljs-symbol">headers:</span> headers
 
@@ -4005,14 +4005,14 @@ headers = {
   <span class="hljs-string">'Accept'</span>: <span class="hljs-string">'application/json'</span>
 }
 
-r = requests.post(<span class="hljs-string">'//events'</span>, params={
+r = requests.post(<span class="hljs-string">'http"//localhost:8669/events'</span>, params={
 
 }, headers = headers)
 
 <span class="hljs-keyword">print</span> r.json()
 
 </code></pre>
-<pre class="highlight tab tab-java"><code>URL obj = <span class="hljs-keyword">new</span> URL(<span class="hljs-string">"//events"</span>);
+<pre class="highlight tab tab-java"><code>URL obj = <span class="hljs-keyword">new</span> URL(<span class="hljs-string">"http"</span><span class="hljs-comment">//localhost:8669/events");</span>
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod(<span class="hljs-string">"POST"</span>);
 <span class="hljs-keyword">int</span> responseCode = con.getResponseCode();
@@ -4043,7 +4043,7 @@ System.out.println(response.toString());
     }
 
     data := bytes.NewBuffer([]<span class="hljs-keyword">byte</span>{jsonReq})
-    req, err := http.NewRequest(<span class="hljs-string">"POST"</span>, <span class="hljs-string">"//events"</span>, data)
+    req, err := http.NewRequest(<span class="hljs-string">"POST"</span>, <span class="hljs-string">"http"</span><span class="hljs-comment">//localhost:8669/events", data)</span>
     req.Header = headers
 
     client := &amp;http.Client{}
@@ -4180,12 +4180,12 @@ This operation does not require authentication
 <p>Code samples</p>
 </blockquote>
 <pre class="highlight tab tab-shell"><code><span class="hljs-comment"># You can also use wget</span>
-curl -X POST //transfers \
-  -H <span class="hljs-string">'Content-Type: application/json'</span> \
-  -H <span class="hljs-string">'Accept: application/json'</span>
+curl -X POST http<span class="hljs-string">"//localhost:8669/transfers \
+  -H 'Content-Type: application/json' \
+  -H 'Accept: application/json'
 
-</code></pre>
-<pre class="highlight tab tab-http"><code><span class="hljs-keyword">POST</span> <span class="hljs-string">//transfers</span> HTTP/1.1
+</span></code></pre>
+<pre class="highlight tab tab-http"><code><span class="hljs-keyword">POST</span> <span class="hljs-string">http"//localhost:8669/transfers</span> HTTP/1.1
 <span class="hljs-attribute">Host</span>: null
 <span class="hljs-attribute">Content-Type</span>: application/json
 <span class="hljs-attribute">Accept</span>: application/json
@@ -4198,7 +4198,7 @@ curl -X POST //transfers \
 };
 
 $.ajax({
-  <span class="hljs-attr">url</span>: <span class="hljs-string">'//transfers'</span>,
+  <span class="hljs-attr">url</span>: <span class="hljs-string">'http"//localhost:8669/transfers'</span>,
   <span class="hljs-attr">method</span>: <span class="hljs-string">'post'</span>,
 
   <span class="hljs-attr">headers</span>: headers,
@@ -4233,7 +4233,7 @@ $.ajax({
 
 };
 
-fetch(<span class="hljs-string">'//transfers'</span>,
+fetch(<span class="hljs-string">'http"//localhost:8669/transfers'</span>,
 {
   <span class="hljs-attr">method</span>: <span class="hljs-string">'POST'</span>,
   <span class="hljs-attr">body</span>: inputBody,
@@ -4254,7 +4254,7 @@ headers = {
   <span class="hljs-string">'Accept'</span> =&gt; <span class="hljs-string">'application/json'</span>
 }
 
-result = RestClient.post <span class="hljs-string">'//transfers'</span>,
+result = RestClient.post <span class="hljs-string">'http"//localhost:8669/transfers'</span>,
   <span class="hljs-symbol">params:</span> {
   }, <span class="hljs-symbol">headers:</span> headers
 
@@ -4267,14 +4267,14 @@ headers = {
   <span class="hljs-string">'Accept'</span>: <span class="hljs-string">'application/json'</span>
 }
 
-r = requests.post(<span class="hljs-string">'//transfers'</span>, params={
+r = requests.post(<span class="hljs-string">'http"//localhost:8669/transfers'</span>, params={
 
 }, headers = headers)
 
 <span class="hljs-keyword">print</span> r.json()
 
 </code></pre>
-<pre class="highlight tab tab-java"><code>URL obj = <span class="hljs-keyword">new</span> URL(<span class="hljs-string">"//transfers"</span>);
+<pre class="highlight tab tab-java"><code>URL obj = <span class="hljs-keyword">new</span> URL(<span class="hljs-string">"http"</span><span class="hljs-comment">//localhost:8669/transfers");</span>
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod(<span class="hljs-string">"POST"</span>);
 <span class="hljs-keyword">int</span> responseCode = con.getResponseCode();
@@ -4305,7 +4305,7 @@ System.out.println(response.toString());
     }
 
     data := bytes.NewBuffer([]<span class="hljs-keyword">byte</span>{jsonReq})
-    req, err := http.NewRequest(<span class="hljs-string">"POST"</span>, <span class="hljs-string">"//transfers"</span>, data)
+    req, err := http.NewRequest(<span class="hljs-string">"POST"</span>, <span class="hljs-string">"http"</span><span class="hljs-comment">//localhost:8669/transfers", data)</span>
     req.Header = headers
 
     client := &amp;http.Client{}
@@ -4437,11 +4437,11 @@ This operation does not require authentication
 <p>Code samples</p>
 </blockquote>
 <pre class="highlight tab tab-shell"><code><span class="hljs-comment"># You can also use wget</span>
-curl -X GET //node/network/peers \
-  -H <span class="hljs-string">'Accept: application/json'</span>
+curl -X GET http<span class="hljs-string">"//localhost:8669/node/network/peers \
+  -H 'Accept: application/json'
 
-</code></pre>
-<pre class="highlight tab tab-http"><code><span class="hljs-keyword">GET</span> <span class="hljs-string">//node/network/peers</span> HTTP/1.1
+</span></code></pre>
+<pre class="highlight tab tab-http"><code><span class="hljs-keyword">GET</span> <span class="hljs-string">http"//localhost:8669/node/network/peers</span> HTTP/1.1
 <span class="hljs-attribute">Host</span>: null
 
 <span class="http"><span class="hljs-attribute">Accept</span>: application/json
@@ -4453,7 +4453,7 @@ curl -X GET //node/network/peers \
 };
 
 $.ajax({
-  <span class="hljs-attr">url</span>: <span class="hljs-string">'//node/network/peers'</span>,
+  <span class="hljs-attr">url</span>: <span class="hljs-string">'http"//localhost:8669/node/network/peers'</span>,
   <span class="hljs-attr">method</span>: <span class="hljs-string">'get'</span>,
 
   <span class="hljs-attr">headers</span>: headers,
@@ -4470,7 +4470,7 @@ $.ajax({
 
 };
 
-fetch(<span class="hljs-string">'//node/network/peers'</span>,
+fetch(<span class="hljs-string">'http"//localhost:8669/node/network/peers'</span>,
 {
   <span class="hljs-attr">method</span>: <span class="hljs-string">'GET'</span>,
 
@@ -4490,7 +4490,7 @@ headers = {
   <span class="hljs-string">'Accept'</span> =&gt; <span class="hljs-string">'application/json'</span>
 }
 
-result = RestClient.get <span class="hljs-string">'//node/network/peers'</span>,
+result = RestClient.get <span class="hljs-string">'http"//localhost:8669/node/network/peers'</span>,
   <span class="hljs-symbol">params:</span> {
   }, <span class="hljs-symbol">headers:</span> headers
 
@@ -4502,14 +4502,14 @@ headers = {
   <span class="hljs-string">'Accept'</span>: <span class="hljs-string">'application/json'</span>
 }
 
-r = requests.get(<span class="hljs-string">'//node/network/peers'</span>, params={
+r = requests.get(<span class="hljs-string">'http"//localhost:8669/node/network/peers'</span>, params={
 
 }, headers = headers)
 
 <span class="hljs-keyword">print</span> r.json()
 
 </code></pre>
-<pre class="highlight tab tab-java"><code>URL obj = <span class="hljs-keyword">new</span> URL(<span class="hljs-string">"//node/network/peers"</span>);
+<pre class="highlight tab tab-java"><code>URL obj = <span class="hljs-keyword">new</span> URL(<span class="hljs-string">"http"</span><span class="hljs-comment">//localhost:8669/node/network/peers");</span>
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod(<span class="hljs-string">"GET"</span>);
 <span class="hljs-keyword">int</span> responseCode = con.getResponseCode();
@@ -4539,7 +4539,7 @@ System.out.println(response.toString());
     }
 
     data := bytes.NewBuffer([]<span class="hljs-keyword">byte</span>{jsonReq})
-    req, err := http.NewRequest(<span class="hljs-string">"GET"</span>, <span class="hljs-string">"//node/network/peers"</span>, data)
+    req, err := http.NewRequest(<span class="hljs-string">"GET"</span>, <span class="hljs-string">"http"</span><span class="hljs-comment">//localhost:8669/node/network/peers", data)</span>
     req.Header = headers
 
     client := &amp;http.Client{}
@@ -4660,11 +4660,11 @@ This operation does not require authentication
 <p>Code samples</p>
 </blockquote>
 <pre class="highlight tab tab-shell"><code><span class="hljs-comment"># You can also use wget</span>
-curl -X GET //subscriptions/block \
-  -H <span class="hljs-string">'Accept: application/json'</span>
+curl -X GET http<span class="hljs-string">"//localhost:8669/subscriptions/block \
+  -H 'Accept: application/json'
 
-</code></pre>
-<pre class="highlight tab tab-http"><code><span class="hljs-keyword">GET</span> <span class="hljs-string">//subscriptions/block</span> HTTP/1.1
+</span></code></pre>
+<pre class="highlight tab tab-http"><code><span class="hljs-keyword">GET</span> <span class="hljs-string">http"//localhost:8669/subscriptions/block</span> HTTP/1.1
 <span class="hljs-attribute">Host</span>: null
 
 <span class="http"><span class="hljs-attribute">Accept</span>: application/json
@@ -4676,7 +4676,7 @@ curl -X GET //subscriptions/block \
 };
 
 $.ajax({
-  <span class="hljs-attr">url</span>: <span class="hljs-string">'//subscriptions/block'</span>,
+  <span class="hljs-attr">url</span>: <span class="hljs-string">'http"//localhost:8669/subscriptions/block'</span>,
   <span class="hljs-attr">method</span>: <span class="hljs-string">'get'</span>,
 
   <span class="hljs-attr">headers</span>: headers,
@@ -4693,7 +4693,7 @@ $.ajax({
 
 };
 
-fetch(<span class="hljs-string">'//subscriptions/block'</span>,
+fetch(<span class="hljs-string">'http"//localhost:8669/subscriptions/block'</span>,
 {
   <span class="hljs-attr">method</span>: <span class="hljs-string">'GET'</span>,
 
@@ -4713,7 +4713,7 @@ headers = {
   <span class="hljs-string">'Accept'</span> =&gt; <span class="hljs-string">'application/json'</span>
 }
 
-result = RestClient.get <span class="hljs-string">'//subscriptions/block'</span>,
+result = RestClient.get <span class="hljs-string">'http"//localhost:8669/subscriptions/block'</span>,
   <span class="hljs-symbol">params:</span> {
   }, <span class="hljs-symbol">headers:</span> headers
 
@@ -4725,14 +4725,14 @@ headers = {
   <span class="hljs-string">'Accept'</span>: <span class="hljs-string">'application/json'</span>
 }
 
-r = requests.get(<span class="hljs-string">'//subscriptions/block'</span>, params={
+r = requests.get(<span class="hljs-string">'http"//localhost:8669/subscriptions/block'</span>, params={
 
 }, headers = headers)
 
 <span class="hljs-keyword">print</span> r.json()
 
 </code></pre>
-<pre class="highlight tab tab-java"><code>URL obj = <span class="hljs-keyword">new</span> URL(<span class="hljs-string">"//subscriptions/block"</span>);
+<pre class="highlight tab tab-java"><code>URL obj = <span class="hljs-keyword">new</span> URL(<span class="hljs-string">"http"</span><span class="hljs-comment">//localhost:8669/subscriptions/block");</span>
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod(<span class="hljs-string">"GET"</span>);
 <span class="hljs-keyword">int</span> responseCode = con.getResponseCode();
@@ -4762,7 +4762,7 @@ System.out.println(response.toString());
     }
 
     data := bytes.NewBuffer([]<span class="hljs-keyword">byte</span>{jsonReq})
-    req, err := http.NewRequest(<span class="hljs-string">"GET"</span>, <span class="hljs-string">"//subscriptions/block"</span>, data)
+    req, err := http.NewRequest(<span class="hljs-string">"GET"</span>, <span class="hljs-string">"http"</span><span class="hljs-comment">//localhost:8669/subscriptions/block", data)</span>
     req.Header = headers
 
     client := &amp;http.Client{}
@@ -4849,11 +4849,11 @@ This operation does not require authentication
 <p>Code samples</p>
 </blockquote>
 <pre class="highlight tab tab-shell"><code><span class="hljs-comment"># You can also use wget</span>
-curl -X GET //subscriptions/event \
-  -H <span class="hljs-string">'Accept: application/json'</span>
+curl -X GET http<span class="hljs-string">"//localhost:8669/subscriptions/event \
+  -H 'Accept: application/json'
 
-</code></pre>
-<pre class="highlight tab tab-http"><code><span class="hljs-keyword">GET</span> <span class="hljs-string">//subscriptions/event</span> HTTP/1.1
+</span></code></pre>
+<pre class="highlight tab tab-http"><code><span class="hljs-keyword">GET</span> <span class="hljs-string">http"//localhost:8669/subscriptions/event</span> HTTP/1.1
 <span class="hljs-attribute">Host</span>: null
 
 <span class="http"><span class="hljs-attribute">Accept</span>: application/json
@@ -4865,7 +4865,7 @@ curl -X GET //subscriptions/event \
 };
 
 $.ajax({
-  <span class="hljs-attr">url</span>: <span class="hljs-string">'//subscriptions/event'</span>,
+  <span class="hljs-attr">url</span>: <span class="hljs-string">'http"//localhost:8669/subscriptions/event'</span>,
   <span class="hljs-attr">method</span>: <span class="hljs-string">'get'</span>,
 
   <span class="hljs-attr">headers</span>: headers,
@@ -4882,7 +4882,7 @@ $.ajax({
 
 };
 
-fetch(<span class="hljs-string">'//subscriptions/event'</span>,
+fetch(<span class="hljs-string">'http"//localhost:8669/subscriptions/event'</span>,
 {
   <span class="hljs-attr">method</span>: <span class="hljs-string">'GET'</span>,
 
@@ -4902,7 +4902,7 @@ headers = {
   <span class="hljs-string">'Accept'</span> =&gt; <span class="hljs-string">'application/json'</span>
 }
 
-result = RestClient.get <span class="hljs-string">'//subscriptions/event'</span>,
+result = RestClient.get <span class="hljs-string">'http"//localhost:8669/subscriptions/event'</span>,
   <span class="hljs-symbol">params:</span> {
   }, <span class="hljs-symbol">headers:</span> headers
 
@@ -4914,14 +4914,14 @@ headers = {
   <span class="hljs-string">'Accept'</span>: <span class="hljs-string">'application/json'</span>
 }
 
-r = requests.get(<span class="hljs-string">'//subscriptions/event'</span>, params={
+r = requests.get(<span class="hljs-string">'http"//localhost:8669/subscriptions/event'</span>, params={
 
 }, headers = headers)
 
 <span class="hljs-keyword">print</span> r.json()
 
 </code></pre>
-<pre class="highlight tab tab-java"><code>URL obj = <span class="hljs-keyword">new</span> URL(<span class="hljs-string">"//subscriptions/event"</span>);
+<pre class="highlight tab tab-java"><code>URL obj = <span class="hljs-keyword">new</span> URL(<span class="hljs-string">"http"</span><span class="hljs-comment">//localhost:8669/subscriptions/event");</span>
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod(<span class="hljs-string">"GET"</span>);
 <span class="hljs-keyword">int</span> responseCode = con.getResponseCode();
@@ -4951,7 +4951,7 @@ System.out.println(response.toString());
     }
 
     data := bytes.NewBuffer([]<span class="hljs-keyword">byte</span>{jsonReq})
-    req, err := http.NewRequest(<span class="hljs-string">"GET"</span>, <span class="hljs-string">"//subscriptions/event"</span>, data)
+    req, err := http.NewRequest(<span class="hljs-string">"GET"</span>, <span class="hljs-string">"http"</span><span class="hljs-comment">//localhost:8669/subscriptions/event", data)</span>
     req.Header = headers
 
     client := &amp;http.Client{}
@@ -5077,11 +5077,11 @@ This operation does not require authentication
 <p>Code samples</p>
 </blockquote>
 <pre class="highlight tab tab-shell"><code><span class="hljs-comment"># You can also use wget</span>
-curl -X GET //subscriptions/transfer \
-  -H <span class="hljs-string">'Accept: application/json'</span>
+curl -X GET http<span class="hljs-string">"//localhost:8669/subscriptions/transfer \
+  -H 'Accept: application/json'
 
-</code></pre>
-<pre class="highlight tab tab-http"><code><span class="hljs-keyword">GET</span> <span class="hljs-string">//subscriptions/transfer</span> HTTP/1.1
+</span></code></pre>
+<pre class="highlight tab tab-http"><code><span class="hljs-keyword">GET</span> <span class="hljs-string">http"//localhost:8669/subscriptions/transfer</span> HTTP/1.1
 <span class="hljs-attribute">Host</span>: null
 
 <span class="http"><span class="hljs-attribute">Accept</span>: application/json
@@ -5093,7 +5093,7 @@ curl -X GET //subscriptions/transfer \
 };
 
 $.ajax({
-  <span class="hljs-attr">url</span>: <span class="hljs-string">'//subscriptions/transfer'</span>,
+  <span class="hljs-attr">url</span>: <span class="hljs-string">'http"//localhost:8669/subscriptions/transfer'</span>,
   <span class="hljs-attr">method</span>: <span class="hljs-string">'get'</span>,
 
   <span class="hljs-attr">headers</span>: headers,
@@ -5110,7 +5110,7 @@ $.ajax({
 
 };
 
-fetch(<span class="hljs-string">'//subscriptions/transfer'</span>,
+fetch(<span class="hljs-string">'http"//localhost:8669/subscriptions/transfer'</span>,
 {
   <span class="hljs-attr">method</span>: <span class="hljs-string">'GET'</span>,
 
@@ -5130,7 +5130,7 @@ headers = {
   <span class="hljs-string">'Accept'</span> =&gt; <span class="hljs-string">'application/json'</span>
 }
 
-result = RestClient.get <span class="hljs-string">'//subscriptions/transfer'</span>,
+result = RestClient.get <span class="hljs-string">'http"//localhost:8669/subscriptions/transfer'</span>,
   <span class="hljs-symbol">params:</span> {
   }, <span class="hljs-symbol">headers:</span> headers
 
@@ -5142,14 +5142,14 @@ headers = {
   <span class="hljs-string">'Accept'</span>: <span class="hljs-string">'application/json'</span>
 }
 
-r = requests.get(<span class="hljs-string">'//subscriptions/transfer'</span>, params={
+r = requests.get(<span class="hljs-string">'http"//localhost:8669/subscriptions/transfer'</span>, params={
 
 }, headers = headers)
 
 <span class="hljs-keyword">print</span> r.json()
 
 </code></pre>
-<pre class="highlight tab tab-java"><code>URL obj = <span class="hljs-keyword">new</span> URL(<span class="hljs-string">"//subscriptions/transfer"</span>);
+<pre class="highlight tab tab-java"><code>URL obj = <span class="hljs-keyword">new</span> URL(<span class="hljs-string">"http"</span><span class="hljs-comment">//localhost:8669/subscriptions/transfer");</span>
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod(<span class="hljs-string">"GET"</span>);
 <span class="hljs-keyword">int</span> responseCode = con.getResponseCode();
@@ -5179,7 +5179,7 @@ System.out.println(response.toString());
     }
 
     data := bytes.NewBuffer([]<span class="hljs-keyword">byte</span>{jsonReq})
-    req, err := http.NewRequest(<span class="hljs-string">"GET"</span>, <span class="hljs-string">"//subscriptions/transfer"</span>, data)
+    req, err := http.NewRequest(<span class="hljs-string">"GET"</span>, <span class="hljs-string">"http"</span><span class="hljs-comment">//localhost:8669/subscriptions/transfer", data)</span>
     req.Header = headers
 
     client := &amp;http.Client{}
@@ -5282,11 +5282,11 @@ This operation does not require authentication
 <p>Code samples</p>
 </blockquote>
 <pre class="highlight tab tab-shell"><code><span class="hljs-comment"># You can also use wget</span>
-curl -X GET //subscriptions/beat \
-  -H <span class="hljs-string">'Accept: application/json'</span>
+curl -X GET http<span class="hljs-string">"//localhost:8669/subscriptions/beat \
+  -H 'Accept: application/json'
 
-</code></pre>
-<pre class="highlight tab tab-http"><code><span class="hljs-keyword">GET</span> <span class="hljs-string">//subscriptions/beat</span> HTTP/1.1
+</span></code></pre>
+<pre class="highlight tab tab-http"><code><span class="hljs-keyword">GET</span> <span class="hljs-string">http"//localhost:8669/subscriptions/beat</span> HTTP/1.1
 <span class="hljs-attribute">Host</span>: null
 
 <span class="http"><span class="hljs-attribute">Accept</span>: application/json
@@ -5298,7 +5298,7 @@ curl -X GET //subscriptions/beat \
 };
 
 $.ajax({
-  <span class="hljs-attr">url</span>: <span class="hljs-string">'//subscriptions/beat'</span>,
+  <span class="hljs-attr">url</span>: <span class="hljs-string">'http"//localhost:8669/subscriptions/beat'</span>,
   <span class="hljs-attr">method</span>: <span class="hljs-string">'get'</span>,
 
   <span class="hljs-attr">headers</span>: headers,
@@ -5315,7 +5315,7 @@ $.ajax({
 
 };
 
-fetch(<span class="hljs-string">'//subscriptions/beat'</span>,
+fetch(<span class="hljs-string">'http"//localhost:8669/subscriptions/beat'</span>,
 {
   <span class="hljs-attr">method</span>: <span class="hljs-string">'GET'</span>,
 
@@ -5335,7 +5335,7 @@ headers = {
   <span class="hljs-string">'Accept'</span> =&gt; <span class="hljs-string">'application/json'</span>
 }
 
-result = RestClient.get <span class="hljs-string">'//subscriptions/beat'</span>,
+result = RestClient.get <span class="hljs-string">'http"//localhost:8669/subscriptions/beat'</span>,
   <span class="hljs-symbol">params:</span> {
   }, <span class="hljs-symbol">headers:</span> headers
 
@@ -5347,14 +5347,14 @@ headers = {
   <span class="hljs-string">'Accept'</span>: <span class="hljs-string">'application/json'</span>
 }
 
-r = requests.get(<span class="hljs-string">'//subscriptions/beat'</span>, params={
+r = requests.get(<span class="hljs-string">'http"//localhost:8669/subscriptions/beat'</span>, params={
 
 }, headers = headers)
 
 <span class="hljs-keyword">print</span> r.json()
 
 </code></pre>
-<pre class="highlight tab tab-java"><code>URL obj = <span class="hljs-keyword">new</span> URL(<span class="hljs-string">"//subscriptions/beat"</span>);
+<pre class="highlight tab tab-java"><code>URL obj = <span class="hljs-keyword">new</span> URL(<span class="hljs-string">"http"</span><span class="hljs-comment">//localhost:8669/subscriptions/beat");</span>
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod(<span class="hljs-string">"GET"</span>);
 <span class="hljs-keyword">int</span> responseCode = con.getResponseCode();
@@ -5384,7 +5384,7 @@ System.out.println(response.toString());
     }
 
     data := bytes.NewBuffer([]<span class="hljs-keyword">byte</span>{jsonReq})
-    req, err := http.NewRequest(<span class="hljs-string">"GET"</span>, <span class="hljs-string">"//subscriptions/beat"</span>, data)
+    req, err := http.NewRequest(<span class="hljs-string">"GET"</span>, <span class="hljs-string">"http"</span><span class="hljs-comment">//localhost:8669/subscriptions/beat", data)</span>
     req.Header = headers
 
     client := &amp;http.Client{}
@@ -5464,12 +5464,12 @@ This operation does not require authentication
 <p>Code samples</p>
 </blockquote>
 <pre class="highlight tab tab-shell"><code><span class="hljs-comment"># You can also use wget</span>
-curl -X POST //debug/tracers \
-  -H <span class="hljs-string">'Content-Type: application/json'</span> \
-  -H <span class="hljs-string">'Accept: application/json'</span>
+curl -X POST http<span class="hljs-string">"//localhost:8669/debug/tracers \
+  -H 'Content-Type: application/json' \
+  -H 'Accept: application/json'
 
-</code></pre>
-<pre class="highlight tab tab-http"><code><span class="hljs-keyword">POST</span> <span class="hljs-string">//debug/tracers</span> HTTP/1.1
+</span></code></pre>
+<pre class="highlight tab tab-http"><code><span class="hljs-keyword">POST</span> <span class="hljs-string">http"//localhost:8669/debug/tracers</span> HTTP/1.1
 <span class="hljs-attribute">Host</span>: null
 <span class="hljs-attribute">Content-Type</span>: application/json
 <span class="hljs-attribute">Accept</span>: application/json
@@ -5482,7 +5482,7 @@ curl -X POST //debug/tracers \
 };
 
 $.ajax({
-  <span class="hljs-attr">url</span>: <span class="hljs-string">'//debug/tracers'</span>,
+  <span class="hljs-attr">url</span>: <span class="hljs-string">'http"//localhost:8669/debug/tracers'</span>,
   <span class="hljs-attr">method</span>: <span class="hljs-string">'post'</span>,
 
   <span class="hljs-attr">headers</span>: headers,
@@ -5503,7 +5503,7 @@ $.ajax({
 
 };
 
-fetch(<span class="hljs-string">'//debug/tracers'</span>,
+fetch(<span class="hljs-string">'http"//localhost:8669/debug/tracers'</span>,
 {
   <span class="hljs-attr">method</span>: <span class="hljs-string">'POST'</span>,
   <span class="hljs-attr">body</span>: inputBody,
@@ -5524,7 +5524,7 @@ headers = {
   <span class="hljs-string">'Accept'</span> =&gt; <span class="hljs-string">'application/json'</span>
 }
 
-result = RestClient.post <span class="hljs-string">'//debug/tracers'</span>,
+result = RestClient.post <span class="hljs-string">'http"//localhost:8669/debug/tracers'</span>,
   <span class="hljs-symbol">params:</span> {
   }, <span class="hljs-symbol">headers:</span> headers
 
@@ -5537,14 +5537,14 @@ headers = {
   <span class="hljs-string">'Accept'</span>: <span class="hljs-string">'application/json'</span>
 }
 
-r = requests.post(<span class="hljs-string">'//debug/tracers'</span>, params={
+r = requests.post(<span class="hljs-string">'http"//localhost:8669/debug/tracers'</span>, params={
 
 }, headers = headers)
 
 <span class="hljs-keyword">print</span> r.json()
 
 </code></pre>
-<pre class="highlight tab tab-java"><code>URL obj = <span class="hljs-keyword">new</span> URL(<span class="hljs-string">"//debug/tracers"</span>);
+<pre class="highlight tab tab-java"><code>URL obj = <span class="hljs-keyword">new</span> URL(<span class="hljs-string">"http"</span><span class="hljs-comment">//localhost:8669/debug/tracers");</span>
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod(<span class="hljs-string">"POST"</span>);
 <span class="hljs-keyword">int</span> responseCode = con.getResponseCode();
@@ -5575,7 +5575,7 @@ System.out.println(response.toString());
     }
 
     data := bytes.NewBuffer([]<span class="hljs-keyword">byte</span>{jsonReq})
-    req, err := http.NewRequest(<span class="hljs-string">"POST"</span>, <span class="hljs-string">"//debug/tracers"</span>, data)
+    req, err := http.NewRequest(<span class="hljs-string">"POST"</span>, <span class="hljs-string">"http"</span><span class="hljs-comment">//localhost:8669/debug/tracers", data)</span>
     req.Header = headers
 
     client := &amp;http.Client{}
@@ -5651,12 +5651,12 @@ This operation does not require authentication
 <p>Code samples</p>
 </blockquote>
 <pre class="highlight tab tab-shell"><code><span class="hljs-comment"># You can also use wget</span>
-curl -X POST //debug/storage-range \
-  -H <span class="hljs-string">'Content-Type: application/json'</span> \
-  -H <span class="hljs-string">'Accept: application/json'</span>
+curl -X POST http<span class="hljs-string">"//localhost:8669/debug/storage-range \
+  -H 'Content-Type: application/json' \
+  -H 'Accept: application/json'
 
-</code></pre>
-<pre class="highlight tab tab-http"><code><span class="hljs-keyword">POST</span> <span class="hljs-string">//debug/storage-range</span> HTTP/1.1
+</span></code></pre>
+<pre class="highlight tab tab-http"><code><span class="hljs-keyword">POST</span> <span class="hljs-string">http"//localhost:8669/debug/storage-range</span> HTTP/1.1
 <span class="hljs-attribute">Host</span>: null
 <span class="hljs-attribute">Content-Type</span>: application/json
 <span class="hljs-attribute">Accept</span>: application/json
@@ -5669,7 +5669,7 @@ curl -X POST //debug/storage-range \
 };
 
 $.ajax({
-  <span class="hljs-attr">url</span>: <span class="hljs-string">'//debug/storage-range'</span>,
+  <span class="hljs-attr">url</span>: <span class="hljs-string">'http"//localhost:8669/debug/storage-range'</span>,
   <span class="hljs-attr">method</span>: <span class="hljs-string">'post'</span>,
 
   <span class="hljs-attr">headers</span>: headers,
@@ -5692,7 +5692,7 @@ $.ajax({
 
 };
 
-fetch(<span class="hljs-string">'//debug/storage-range'</span>,
+fetch(<span class="hljs-string">'http"//localhost:8669/debug/storage-range'</span>,
 {
   <span class="hljs-attr">method</span>: <span class="hljs-string">'POST'</span>,
   <span class="hljs-attr">body</span>: inputBody,
@@ -5713,7 +5713,7 @@ headers = {
   <span class="hljs-string">'Accept'</span> =&gt; <span class="hljs-string">'application/json'</span>
 }
 
-result = RestClient.post <span class="hljs-string">'//debug/storage-range'</span>,
+result = RestClient.post <span class="hljs-string">'http"//localhost:8669/debug/storage-range'</span>,
   <span class="hljs-symbol">params:</span> {
   }, <span class="hljs-symbol">headers:</span> headers
 
@@ -5726,14 +5726,14 @@ headers = {
   <span class="hljs-string">'Accept'</span>: <span class="hljs-string">'application/json'</span>
 }
 
-r = requests.post(<span class="hljs-string">'//debug/storage-range'</span>, params={
+r = requests.post(<span class="hljs-string">'http"//localhost:8669/debug/storage-range'</span>, params={
 
 }, headers = headers)
 
 <span class="hljs-keyword">print</span> r.json()
 
 </code></pre>
-<pre class="highlight tab tab-java"><code>URL obj = <span class="hljs-keyword">new</span> URL(<span class="hljs-string">"//debug/storage-range"</span>);
+<pre class="highlight tab tab-java"><code>URL obj = <span class="hljs-keyword">new</span> URL(<span class="hljs-string">"http"</span><span class="hljs-comment">//localhost:8669/debug/storage-range");</span>
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod(<span class="hljs-string">"POST"</span>);
 <span class="hljs-keyword">int</span> responseCode = con.getResponseCode();
@@ -5764,7 +5764,7 @@ System.out.println(response.toString());
     }
 
     data := bytes.NewBuffer([]<span class="hljs-keyword">byte</span>{jsonReq})
-    req, err := http.NewRequest(<span class="hljs-string">"POST"</span>, <span class="hljs-string">"//debug/storage-range"</span>, data)
+    req, err := http.NewRequest(<span class="hljs-string">"POST"</span>, <span class="hljs-string">"http"</span><span class="hljs-comment">//localhost:8669/debug/storage-range", data)</span>
     req.Header = headers
 
     client := &amp;http.Client{}
